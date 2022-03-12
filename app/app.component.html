@@ -1,0 +1,14 @@
+<div style="text-align:center">
+  <h1>
+    Reading Data out of Routes
+  </h1>
+</div>
+
+<nav>
+  <a [routerLink]="['people']" routerLinkActive="active">People simple</a>
+  <a [routerLink]="['childroutes','people']" routerLinkActive="active">People side by side</a>
+  <a [routerLink]="[{ outlets: { help: ['person', 'detail']}}]" routerLinkActive="active">Secondary route</a>
+</nav>
+
+<router-outlet></router-outlet>
+<router-outlet name="help"></router-outlet>
